@@ -8,8 +8,7 @@ tags: "org:mirage"
 dev-repo: "git+https://github.com/TheLortex/ocaml-freestanding.git#cross-compiler"
 build: [
   ["./configure.sh" "--prefix=%{prefix}%" 
-    "--target=x86_64-solo5-none-static" { arch = "x86_64"} 
-    "--target=aarch64-solo5-none-static" { arch = "arm64"} ]
+    "--target=aarch64-solo5-none-static" ]
   [make "-j%{jobs}%"]
 ]
 install: [make "install" ]
